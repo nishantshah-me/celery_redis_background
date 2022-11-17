@@ -1,9 +1,7 @@
-from time import sleep
 import traceback
+from time import sleep
 
-from celery import current_task
 from celery import states
-from celery.exceptions import Ignore
 
 from worker import celery
 
@@ -25,3 +23,4 @@ def hello_world(self, name):
                 'exc_message': traceback.format_exc().split('\n')
             })
         raise ex
+

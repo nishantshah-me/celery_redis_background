@@ -1,4 +1,6 @@
 import os
+
+import aioredis
 from celery import Celery
 
 CELERY_BROKER_URL = os.getenv("REDISSERVER", "redis://redis_server:6379")
